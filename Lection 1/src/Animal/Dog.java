@@ -3,8 +3,8 @@ package Animal;
 public class Dog extends Animal {
     public static int count;
 
-    public Dog(String type, String name, int swimLimit, int runLimit) {
-        super(type, name, swimLimit, runLimit);
+    public Dog(String name, int swimLimit, int runLimit) {
+        super("Dog", name, swimLimit, runLimit);
         count++;
     }
 

@@ -3,7 +3,7 @@ package Animal;
 public class Tiger extends Cat {
     public static int count;
 
-    public Tiger(String type, String name, int swimLimit, int runLimit) {
+    public Tiger(String name, int swimLimit, int runLimit) {
         super("Tiger", name, swimLimit, runLimit);
         count++;
     }

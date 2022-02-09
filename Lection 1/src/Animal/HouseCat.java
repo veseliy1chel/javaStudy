@@ -3,7 +3,7 @@ package Animal;
 public class HouseCat extends Cat {
     public static int count;
 
-    public HouseCat(String type, String name, int swimLimit, int runLimit) {
+    public HouseCat(String name, int swimLimit, int runLimit) {
         super("House Cat", name, swimLimit, runLimit);
         count++;
     }
