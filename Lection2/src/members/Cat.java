@@ -1,6 +1,6 @@
 package members;
 
-public class Cat implements Runnable,Jumpable {
+public class Cat implements Activities {
     private String name;
     private int maxJumpLimit;
     private int maxRunLimit;

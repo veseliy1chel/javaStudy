@@ -1,6 +1,6 @@
 package members;
 
-public class Robot implements Jumpable,Runnable {
+public class Robot implements Activities {
     private String name;
     private int maxJumpLimit;
     private int maxRunLimit;

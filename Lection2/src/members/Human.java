@@ -1,6 +1,6 @@
 package members;
 
-public class Human implements Runnable,Jumpable {
+public class Human implements Activities {
     private String name;
     private int maxJumpLimit;
     private int maxRunLimit;
