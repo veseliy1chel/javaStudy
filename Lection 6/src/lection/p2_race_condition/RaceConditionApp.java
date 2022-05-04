@@ -5,7 +5,7 @@ public class RaceConditionApp {
         Counter counter = new Counter();
 
         Thread incThread = new Thread(()->{
-            for(int i =0; i<100;i++) {
+            for(int i =0; i<1000;i++) {
                 counter.inc();
                 try {
                     Thread.sleep(5);
@@ -15,7 +15,7 @@ public class RaceConditionApp {
             }
         });
         Thread decThread = new Thread(()->{
-            for(int i =0; i<100;i++){
+            for(int i =0; i<1000;i++){
                 counter.decr();
                 try{
                     Thread.sleep(5);
