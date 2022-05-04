@@ -6,7 +6,6 @@ public class SynchronizedMethodApp {
     public static void main(String[] args) {
         SynchronizedMethodApp e1 = new SynchronizedMethodApp();
         SynchronizedMethodApp e2 = new SynchronizedMethodApp();
-        
         new Thread(()->e1.method1()).start();
         new Thread(()->e1.method2()).start();
         new Thread(()->e1.method3()).start();
