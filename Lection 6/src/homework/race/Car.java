@@ -6,6 +6,8 @@ import java.util.concurrent.CyclicBarrier;
 
 class Car implements Runnable {
     private static int CARS_COUNT;
+    private static Object monitor = new Object();
+    private static boolean haveWinner = false;
     static {
         CARS_COUNT = 0;
     }
@@ -42,9 +44,12 @@ class Car implements Runnable {
             if(race.getStages().get(i)==race.getStages().get(race.getStages().size()-1)){
                 try{
                     cb.await();
-                    if(cb.await()==1){
-                        System.out.println(this.name + " - Winner!!");
+                    synchronized (monitor){
+                        if(haveWinner){
+                            System.out.println(this.name+ "  - Winner!!");
+                        }
                     }
+
                 }catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (BrokenBarrierException e) {
