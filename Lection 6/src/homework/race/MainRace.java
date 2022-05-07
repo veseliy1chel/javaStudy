@@ -11,7 +11,7 @@ public class MainRace {
     public static final int CARS_COUNT = 4;
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
-        Race race = new Race(new Road(60), new Tunnel(), new Road(40));
+        Race race = new Race(new Road(60), new Tunnel(CARS_COUNT), new Road(40));
         Car[] cars = new Car[CARS_COUNT];
         CountDownLatch countFinish  = new CountDownLatch(cars.length);
         CountDownLatch countStart = new CountDownLatch(cars.length);
